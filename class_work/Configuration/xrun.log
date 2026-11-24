@@ -1,0 +1,11 @@
+xrun(64): 23.03-s011: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s011: Started on Apr 18, 2026 at 13:31:09 +06
+xrun
+	-sv
+	-access +rwc
+	+gui
+	rtl/top.sv
+	tb/TB_top.sv
+xrun: *E,FILEMIS: Cannot find the provided file rtl/top.sv.
+xrun: *E,FILEMIS: Cannot find the provided file tb/TB_top.sv.
+TOOL:	xrun(64)	23.03-s011: Exiting on Apr 18, 2026 at 13:31:10 +06  (total: 00:00:01)

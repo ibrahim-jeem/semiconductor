@@ -1,0 +1,10 @@
+To pull latest update to local repository
+ 
+git fetch origin
+git status
+git pull origin main
+ 
+username: 
+sm25aiub
+password: 
+[REDACTED_GITHUB_TOKEN]

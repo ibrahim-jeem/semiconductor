@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/rizvi/.vim'
+let g:netrw_dirhist_2='/home/rizvi/MYADDER_4BIT_ST'
+let g:netrw_dirhist_3='/home/rizvi/FEB14/ADDER_4BIT_ST'
+let g:netrw_dirhist_4='/home/rizvi/DORITO_AUG10/projects/MAC_TEST/synth_gpdk_false'
+let g:netrw_dirhist_5='/home/rizvi/ASIC_SM26/Lab1_Test'

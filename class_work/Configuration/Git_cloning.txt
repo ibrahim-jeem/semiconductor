@@ -1,0 +1,10 @@
+The git clone syntax seems to be git clone URL target_folder_path/
+ 
+For a user B2_Rahim, it will be
+ 
+git clone https://github.com/sm25aiub/Configuration.git /home/B2_Rahim/Configuration/
+ 
+username: 
+sm25aiub
+password: 
+[REDACTED_GITHUB_TOKEN]
