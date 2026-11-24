@@ -1,5 +1,0 @@
-s1(31Oct2026:13:08:32):  xrun -sv -access +rwc +gui BATCH03/rtl/top.sv BATCH03/tb/TB_top.sv 
-s2(31Oct2026:13:30:25):  xrun -sv -access +rwc +gui BATCH03/rtl/top.sv BATCH03/tb/TB_top.sv 
-s3(31Oct2026:13:38:06):  xrun -sv -access +rwc +gui BATCH03/rtl/top.sv BATCH03/tb/TB_top.sv 
-s4(14Nov2026:11:18:54):  xrun -sv -access +rwc +gui BATCH03/rtl/top.sv BATCH03/tb/TB_top.sv 
-s5(14Nov2026:11:51:52):  xrun -sv -access +rwc +gui BATCH03/rtl/top.sv BATCH03/tb/TB_top.sv 
