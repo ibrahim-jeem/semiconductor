@@ -1,0 +1,1 @@
+s1(14Nov2026:13:55:24):  xrun -sv -access +rwc +gui rtl/top.sv tb/TB_top.sv 

@@ -1,0 +1,125 @@
+xrun(64): 23.03-s011: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s011: Started on Nov 14, 2026 at 11:51:51 +06
+xrun
+	-sv
+	-access +rwc
+	+gui
+	BATCH03/rtl/top.sv
+	BATCH03/tb/TB_top.sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source ../cadence/lnx/xce_24/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm TB_top.A TB_top.B TB_top.CARRYOUT TB_top.SUM
+Created probe 1
+xcelium> run
+ 0: Generator Task...
+
+ 0: Monitor Task...
+
+ 100000: Generator Task...
+
+ 100000: Monitor Task...
+
+Time = 100000,	A =  2,	B = 14,	SUM = 0 	CARRYOUT =1
+
+ 101000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 200000: Generator Task...
+
+ 200000: Monitor Task...
+
+Time = 200000,	A =  5,	B = 12,	SUM = 1 	CARRYOUT =1
+
+ 201000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 300000: Generator Task...
+
+ 300000: Monitor Task...
+
+Time = 300000,	A =  8,	B =  5,	SUM =13 	CARRYOUT =0
+
+ 301000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 400000: Generator Task...
+
+ 400000: Monitor Task...
+
+Time = 400000,	A =  6,	B = 12,	SUM = 2 	CARRYOUT =1
+
+ 401000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 500000: Generator Task...
+
+ 500000: Monitor Task...
+
+Time = 500000,	A = 10,	B = 11,	SUM = 5 	CARRYOUT =1
+
+ 501000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 600000: Generator Task...
+
+ 600000: Monitor Task...
+
+Time = 600000,	A = 11,	B =  4,	SUM =15 	CARRYOUT =0
+
+ 601000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 700000: Generator Task...
+
+ 700000: Monitor Task...
+
+Time = 700000,	A = 14,	B = 12,	SUM =10 	CARRYOUT =1
+
+ 701000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 800000: Generator Task...
+
+ 800000: Monitor Task...
+
+Time = 800000,	A = 15,	B = 11,	SUM =10 	CARRYOUT =1
+
+ 801000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 900000: Generator Task...
+
+ 900000: Monitor Task...
+
+Time = 900000,	A =  3,	B = 13,	SUM = 0 	CARRYOUT =1
+
+ 901000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+Time = 1000000,	A = 13,	B = 11,	SUM = 8 	CARRYOUT =1
+
+ 1001000: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+Simulation complete via $finish(1) at time 1001 NS + 0
+./BATCH03/tb/TB_top.sv:115 	$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	23.03-s011: Exiting on Nov 14, 2026 at 11:55:15 +06  (total: 00:03:24)

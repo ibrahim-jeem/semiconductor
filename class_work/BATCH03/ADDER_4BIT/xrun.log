@@ -1,0 +1,155 @@
+xrun(64): 23.03-s011: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s011: Started on Nov 14, 2026 at 13:55:23 +06
+xrun
+	-sv
+	-access +rwc
+	+gui
+	rtl/top.sv
+	tb/TB_top.sv
+file: rtl/top.sv
+	module worklib.ADDER_4BIT:sv
+		errors: 0, warnings: 0
+file: tb/TB_top.sv
+	module worklib.TB_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TB_top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ADDER_4BIT:sv <0x127cb787>
+			streams:   1, words:   436
+		worklib.TB_top:sv <0x425235e4>
+			streams:  15, words: 17282
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              2       2
+		Registers:           13      13
+		Scalar wires:         2       -
+		Vectored wires:       4       -
+		Always blocks:        1       1
+		Initial blocks:       3       3
+		Parallel blocks:      2       2
+		Pseudo assignments:   4       -
+		Assertions:           1       1
+	Writing initial simulation snapshot: worklib.TB_top:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /home/cadence/lnx/xce_24/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm TB_top.A TB_top.B TB_top.SUM TB_top.CARRYOUT
+Created probe 1
+xcelium> run
+ 0: Generator Task...
+
+ 0: Monitor Task...
+
+ 100: Generator Task...
+
+ 100: Monitor Task...
+
+Time =  100,	A =  2,	B = 14,	SUM = 0 	CARRYOUT =1
+
+ 101: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 200: Generator Task...
+
+ 200: Monitor Task...
+
+Time =  200,	A =  5,	B = 12,	SUM = 1 	CARRYOUT =1
+
+ 201: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 300: Generator Task...
+
+ 300: Monitor Task...
+
+Time =  300,	A =  8,	B =  5,	SUM =13 	CARRYOUT =0
+
+ 301: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 400: Generator Task...
+
+ 400: Monitor Task...
+
+Time =  400,	A =  6,	B = 12,	SUM = 2 	CARRYOUT =1
+
+ 401: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 500: Generator Task...
+
+ 500: Monitor Task...
+
+Time =  500,	A = 10,	B = 11,	SUM = 5 	CARRYOUT =1
+
+ 501: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 600: Generator Task...
+
+ 600: Monitor Task...
+
+Time =  600,	A = 11,	B =  4,	SUM =15 	CARRYOUT =0
+
+ 601: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 700: Generator Task...
+
+ 700: Monitor Task...
+
+Time =  700,	A = 14,	B = 12,	SUM =10 	CARRYOUT =1
+
+ 701: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 800: Generator Task...
+
+ 800: Monitor Task...
+
+Time =  800,	A = 15,	B = 11,	SUM =10 	CARRYOUT =1
+
+ 801: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+ 900: Generator Task...
+
+ 900: Monitor Task...
+
+Time =  900,	A =  3,	B = 13,	SUM = 0 	CARRYOUT =1
+
+ 901: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+Time = 1000,	A = 13,	B = 11,	SUM = 8 	CARRYOUT =1
+
+ 1001: Checker Task...
+
+////////////////////////  OUTPUT IS OK  ///////////////////
+
+Simulation complete via $finish(1) at time 1001 NS + 0
+./tb/TB_top.sv:113     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	23.03-s011: Exiting on Nov 14, 2026 at 13:56:33 +06  (total: 00:01:10)

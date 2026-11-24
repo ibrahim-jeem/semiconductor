@@ -1,0 +1,57 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[14:07:40.095617] Configured Lic search path (21.01-s002): 5280@cadence
+
+Version: 21.18-s082_1, built Tue Jul 18 00:08:41 PDT 2023
+Options: -files genus_script.tcl 
+Date:    Sat Nov 14 14:07:40 2026
+Host:    cadence (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (8cores*32cpus*2physical cpus*Intel(R) Xeon(R) CPU E5-2440 v2 @ 1.90GHz 20480KB) (197849384KB)
+PID:     5244
+OS:      Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+
+[14:07:40.022419] Periodic Lic check successful
+[14:07:40.022456] Feature usage summary:
+[14:07:40.022458] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (16 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source genus_script.tcl
+#@ Begin verbose source ./genus_script.tcl
+@file(genus_script.tcl) 1: set_db init_lib_search_path lib/
+  Setting attribute of root '/': 'init_lib_search_path' = lib/
+@file(genus_script.tcl) 2: set_db init_hdl_search_path ../rtl/
+  Setting attribute of root '/': 'init_hdl_search_path' = ../rtl/
+@file(genus_script.tcl) 3: read_libs lib/slow_lib/slow_vdd1v0_basicCells.lib
+Error   : File error. [FILE-100] [::legacy::set_attribute]
+        : Cannot open file 'lib/slow_lib/slow_vdd1v0_basicCells.lib'
+        : Make sure that the file is a readable regular file and has the specified name.
+Error   : A library file does not exist. [LBR-68] [::legacy::set_attribute]
+        : File 'lib/slow_lib/slow_vdd1v0_basicCells.lib' could not be found. File '<none>' was the last file that was successfully read in.
+        : Make sure that the library file exists or check for a typo in the file name.
+Error   : The data value for this attribute is invalid. [TUI-24] [::legacy::set_attribute]
+        : The value '  { lib/slow_lib/slow_vdd1v0_basicCells.lib } ' cannot be set for attribute 'library'.
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *' (in legacy UI mode) or 'help * <attr_name> -detail' (in CUI mode).
+#@ End verbose source ./genus_script.tcl
+1
+Encountered problems processing file: genus_script.tcl
+WARNING: This version of the tool is 1215 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[14:08:04.293176] Cdslmd servers: cadence
+[14:08:04.293249] Feature usage summary:
+[14:08:04.293249] Genus_Synthesis
+

@@ -1,0 +1,2 @@
+1794642554 /home/B3_Ibrahim/BATCH03/ADDER_4BIT/rtl/top.sv
+1794642612 /home/B3_Ibrahim/BATCH03/ADDER_4BIT/tb/TB_top.sv

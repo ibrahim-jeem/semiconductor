@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-sv
+-access
++rwc
++gui
+BATCH03/rtl/top.sv
+BATCH03/tb/TB_top.sv
