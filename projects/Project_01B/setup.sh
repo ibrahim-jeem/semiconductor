@@ -9,7 +9,7 @@ endif
 
 # Read user arguments
 set PROJECT = "$argv[1]"
-set BASE_BATH = "$argv[2]"
+set BASE_PATH = "$argv[2]"
 set TECHNOLOGY = "$argv[3]"
 
 # Select technology library
@@ -48,19 +48,38 @@ endif
 
 # Create project directory
 mkdir -p "$PROJECT_DIR"
-if ($status !=0) then
+if ($status != 0) then
     echo "ERROR: Could not create project directory."
     exit 1
 endif
 
-# Create requried subdirectorys
+# Create required subdirectories
 mkdir -p "$PROJECT_DIR/rtl"
+if ($status != 0) then
+    echo "ERROR: Could not create rtl directory."
+    exit 1
+endif
+
 mkdir -p "$PROJECT_DIR/tb"
+if ($status != 0) then
+    echo "ERROR: Could not create tb directory."
+    exit 1
+endif
+
 mkdir -p "$PROJECT_DIR/constraints"
-mkdir -p "$PROJECT_DIR/synth"
+if ($status != 0) then
+    echo "ERROR: Could not create constraints directory."
+    exit 1
+endif
 
-cp -r "$TECH_LIB" "$PROJECT_DIR/synth/lib"
+mkdir -p "$PROJECT_DIR/synth/lib"
+if ($status != 0) then
+    echo "ERROR: Could not create synth/lib directory."
+    exit 1
+endif
 
+# Copy technology library contents
+cp -r "$TECH_LIB/." "$PROJECT_DIR/synth/lib/"
 if ($status != 0) then
     echo "ERROR: Technology library copy failed."
     exit 1
@@ -74,5 +93,5 @@ echo "Project Path: $PROJECT_DIR"
 echo "___________________________"
 
 echo "Directory structure"
-find "PROJECT_DIR" -type d
+find "$PROJECT_DIR" -type d
 
